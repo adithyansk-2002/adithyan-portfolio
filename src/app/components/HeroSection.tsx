@@ -5,12 +5,13 @@ import AppImage from '@/components/ui/AppImage';
 import AnimatedBackground from "./AnimatedBackground";
 
 const roles = [
-  'Cloud Engineer',
-  'DevOps Engineer',
+  'Server Administrator Trainee',
+  'Cloud & DevOps Engineer',
   'Linux Administrator',
-  'AWS Enthusiast',
   'Infrastructure Automation Engineer',
-  'Open Source Learner'];
+  'AWS Specialist',
+  'IaC & CI/CD Engineer',
+];
 
 
 export default function HeroSection() {
@@ -111,10 +112,9 @@ export default function HeroSection() {
           </div>
 
           <p className="text-muted-foreground text-base leading-relaxed max-w-lg">
-            Computer Science graduate and Cloud & DevOps Intern passionate about building{' '}
-            <span className="text-foreground font-medium">secure, scalable and automated</span>{' '}
-            cloud infrastructure using AWS, Linux, Docker, Terraform and Ansible. I enjoy solving
-            infrastructure problems and documenting real-world implementations through technical articles.
+            Server Administrator Trainee with hands-on experience designing, automating, and managing cloud infrastructure using{' '}
+            <span className="text-foreground font-medium">AWS, Linux, Docker, Kubernetes, Jenkins, Terraform, and Ansible</span>.
+            Specialized in Infrastructure as Code (IaC), Linux system administration, production web hosting, and CI/CD automation across AWS environments.
           </p>
 
           <div className="flex flex-wrap gap-3">
@@ -194,7 +194,7 @@ export default function HeroSection() {
                 {/* Image Card */}
                 <div className="relative w-72 h-72 lg:w-96 lg:h-96 rounded-2xl overflow-hidden">
                   <AppImage
-                    src="/images/me.jpeg"
+                    src="/images/profile/me.jpeg"
                     alt="Adithyan Suresh Kumar"
                     fill
                     className="object-cover object-top scale-115 brightness-105 contrast-105 saturate-90 transition-all duration-700 hover:scale-120"
@@ -207,7 +207,7 @@ export default function HeroSection() {
                 <div className="glass-card rounded-xl px-4 py-3 border border-accent/20">
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                    <span className="text-xs font-mono text-muted-foreground">Cloud & DevOps Intern</span>
+                    <span className="text-xs font-mono text-muted-foreground">Server Administrator Trainee</span>
                   </div>
                   <p className="text-sm font-semibold text-foreground mt-0.5">IPSR Solutions Ltd</p>
                 </div>
@@ -223,7 +223,7 @@ export default function HeroSection() {
                     <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
                   </svg>
                 </div>
-                <span className="text-xs font-mono text-accent">5+ AWS Services</span>
+                <span className="text-xs font-mono text-accent">AWS & Linux</span>
               </div>
             </div>
             <div
@@ -237,7 +237,7 @@ export default function HeroSection() {
                     <path d="m8 12 3 3 5-5" />
                   </svg>
                 </div>
-                <span className="text-xs font-mono text-purple-light">10+ Projects</span>
+                <span className="text-xs font-mono text-purple-light">IaC & CI/CD</span>
               </div>
             </div>
           </div>
@@ -246,3 +246,4 @@ export default function HeroSection() {
     </section>
   );
 }
+
