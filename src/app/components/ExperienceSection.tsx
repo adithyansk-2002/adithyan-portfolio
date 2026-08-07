@@ -62,6 +62,20 @@ const education = [
     period: '2021 – 2025',
     color: '#22D3EE',
   },
+  {
+    degree: 'Higher Secondary (High School Diploma)',
+    institution: "St. Antony\'s Public School",
+    location: 'Kottayam, Kerala',
+    period: '2020 – 2021',
+    color: '#2563EB',
+  },
+  {
+    degree: 'Secondary (High School Diploma)',
+    institution: "St. Paul\'s School",
+    location: 'New Delhi, India',
+    period: '2007 – 2019',
+    color: '#7C3AED',
+  },
 ];
 
 export default function ExperienceSection() {
@@ -191,9 +205,9 @@ export default function ExperienceSection() {
                 {[
                   'Published 3 open-source Cloud & DevOps projects demonstrating IaC & automation.',
                   'Led 5-member team as Team Leader in MakerHub IEDC 24-Hour Hackathon.',
-                  'Reduced release cycles by 70% using Jenkins & Ansible CI/CD pipelines.',
-                  'Improved server system efficiency by 20% & decreased response time by 30%.',
-                  'Reduced vulnerabilities by 15% via Let\'s Encrypt SSL, firewalls & SES integration.',
+                  'Reduced release cycles using Jenkins & Ansible CI/CD pipelines.',
+                  'Improved server system efficiency and  decreased response time.',
+                  'Reduced vulnerabilities using Let\'s Encrypt SSL, firewalls & SES integration.',
                 ]?.map((a) => (
                   <li key={a} className="flex items-start gap-2 text-xs text-muted-foreground leading-relaxed">
                     <span className="mt-0.5 text-accent font-bold">+</span>
