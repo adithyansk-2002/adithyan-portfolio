@@ -25,13 +25,13 @@ const skillCategories: SkillCategory[] = [
       </svg>
     ),
     skills: [
-      { name: 'EC2', level: 85 }, { name: 'IAM', level: 80 }, { name: 'VPC', level: 78 },
-      { name: 'S3', level: 82 }, { name: 'Route 53', level: 75 }, { name: 'ALB', level: 80 },
-      { name: 'Auto Scaling', level: 72 }, { name: 'SES', level: 78 }, { name: 'CloudWatch', level: 70 },
+      { name: 'EC2', level: 90 }, { name: 'IAM', level: 85 }, { name: 'VPC', level: 85 },
+      { name: 'Route 53', level: 82 }, { name: 'ALB', level: 85 }, { name: 'S3', level: 88 },
+      { name: 'SES', level: 80 }, { name: 'SNS', level: 75 }, { name: 'CloudWatch', level: 80 },
     ],
   },
   {
-    title: 'DevOps',
+    title: 'DevOps & Containers',
     color: '#22D3EE',
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -39,13 +39,13 @@ const skillCategories: SkillCategory[] = [
       </svg>
     ),
     skills: [
-      { name: 'Docker', level: 82 }, { name: 'Jenkins', level: 68 }, { name: 'Terraform', level: 72 },
-      { name: 'Ansible', level: 85 }, { name: 'Git', level: 88 }, { name: 'GitHub', level: 88 },
-      { name: 'IaC', level: 80 }, { name: 'CI/CD', level: 75 },
+      { name: 'Docker', level: 88 }, { name: 'Kubernetes', level: 82 }, { name: 'Ansible', level: 90 },
+      { name: 'Terraform', level: 85 }, { name: 'Jenkins', level: 80 }, { name: 'GitHub Actions', level: 85 },
+      { name: 'GHCR', level: 80 }, { name: 'Traefik', level: 78 }, { name: 'Nginx / Apache', level: 88 },
     ],
   },
   {
-    title: 'Linux',
+    title: 'Operating Systems & Security',
     color: '#7C3AED',
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -53,40 +53,12 @@ const skillCategories: SkillCategory[] = [
       </svg>
     ),
     skills: [
-      { name: 'RHEL', level: 85 }, { name: 'Amazon Linux 2023', level: 88 }, { name: 'Ubuntu', level: 80 },
-      { name: 'Shell Scripting', level: 78 }, { name: 'Networking', level: 72 }, { name: 'LVM', level: 70 },
-      { name: 'Apache', level: 82 }, { name: 'Nginx', level: 80 }, { name: 'MariaDB', level: 75 },
+      { name: 'RHEL', level: 88 }, { name: 'Amazon Linux 2023', level: 92 }, { name: 'Linux System Admin', level: 90 },
+      { name: 'SSL / TLS & Let\'s Encrypt', level: 88 }, { name: 'Firewalld', level: 85 }, { name: 'SELinux', level: 80 },
     ],
   },
   {
-    title: 'Programming',
-    color: '#2563EB',
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" />
-      </svg>
-    ),
-    skills: [
-      { name: 'Python', level: 85 }, { name: 'JavaScript', level: 78 }, { name: 'React', level: 75 },
-      { name: 'Flask', level: 72 }, { name: 'Java', level: 68 }, { name: 'SQL', level: 72 },
-      { name: 'Solidity', level: 60 }, { name: 'PHP', level: 65 }, { name: 'HTML/CSS', level: 82 },
-    ],
-  },
-  {
-    title: 'Machine Learning',
-    color: '#A78BFA',
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M9.663 17h4.673M12 3v1m6.364 1.636-.707.707M21 12h-1M4 12H3M6.343 6.343l-.707-.707M10.121 9.879a3 3 0 1 0 4.243 4.242" />
-      </svg>
-    ),
-    skills: [
-      { name: 'TensorFlow', level: 68 }, { name: 'Scikit-Learn', level: 72 }, { name: 'LSTM', level: 65 },
-      { name: 'NumPy', level: 78 }, { name: 'Pandas', level: 75 }, { name: 'Matplotlib', level: 72 },
-    ],
-  },
-  {
-    title: 'Monitoring',
+    title: 'Monitoring & Observability',
     color: '#34D399',
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -94,7 +66,35 @@ const skillCategories: SkillCategory[] = [
       </svg>
     ),
     skills: [
-      { name: 'Prometheus', level: 65 }, { name: 'Grafana', level: 62 },
+      { name: 'Prometheus', level: 82 }, { name: 'Grafana', level: 85 }, { name: 'Loki', level: 80 },
+      { name: 'Promtail', level: 78 },
+    ],
+  },
+  {
+    title: 'Programming & Scripting',
+    color: '#2563EB',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" />
+      </svg>
+    ),
+    skills: [
+      { name: 'Python', level: 88 }, { name: 'Bash', level: 85 }, { name: 'JavaScript', level: 80 },
+      { name: 'TypeScript', level: 78 }, { name: 'SQL', level: 82 },
+    ],
+  },
+  {
+    title: 'Web & Databases',
+    color: '#A78BFA',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <ellipse cx="12" cy="5" rx="9" ry="3" /><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+      </svg>
+    ),
+    skills: [
+      { name: 'React.js', level: 80 }, { name: 'Flask', level: 78 }, { name: 'HTML & CSS', level: 85 },
+      { name: 'MariaDB', level: 85 }, { name: 'MySQL', level: 82 },
     ],
   },
 ];

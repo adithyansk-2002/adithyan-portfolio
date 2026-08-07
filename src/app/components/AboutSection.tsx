@@ -75,21 +75,21 @@ export default function AboutSection() {
 
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                I&apos;m <span className="text-foreground font-semibold">Adithyan Suresh Kumar</span>, a Computer Science Engineering graduate (B.Tech, 2025) from Amal Jyothi College of Engineering, Kottayam, Kerala.
+                I&apos;m <span className="text-foreground font-semibold">Adithyan Suresh Kumar</span>, a Computer Science Engineering graduate (B.Tech, 2021–2025) from Amal Jyothi College of Engineering, Kottayam, Kerala.
               </p>
               <p>
-                Currently working as a <span className="text-accent font-medium">Cloud & DevOps Intern at IPSR Solutions Ltd</span>, where I&apos;m gaining hands-on experience in cloud infrastructure, Linux administration, automation, containerization, and deployment workflows.
+                Currently working as a <span className="text-accent font-medium">Server Administrator Trainee at IPSR Solutions Ltd</span>, where I design, automate, and manage cloud infrastructure using AWS, Linux, Docker, Kubernetes, Jenkins, Terraform, and Ansible.
               </p>
               <p>
-                I enjoy troubleshooting complex systems, automating infrastructure, and building reliable, secure, and scalable cloud solutions. I document my learning through technical articles and project walkthroughs, sharing practical implementation and lessons learned from real-world projects.
+                My experience spans <span className="text-foreground font-medium">Infrastructure as Code (IaC)</span>, Linux system administration (RHEL & Amazon Linux 2023), production web hosting (Nginx, PHP 8, MariaDB, WordPress), system recovery (GRUB troubleshooting), and CI/CD automation across AWS environments.
               </p>
               <p>
-                I&apos;m currently seeking opportunities in <span className="text-primary font-medium">Cloud Engineering, DevOps, and Infrastructure Engineering</span>.
+                I&apos;m passionate about building <span className="text-primary font-medium">secure, automated, and high-availability cloud infrastructure</span> and driving operational efficiency.
               </p>
             </div>
 
             <div className="flex flex-wrap gap-2">
-              {['AWS', 'Linux', 'Ansible', 'Docker', 'Terraform', 'CI/CD', 'IaC'].map((tag) => (
+              {['AWS', 'Linux', 'Ansible', 'Docker', 'Kubernetes', 'Terraform', 'Jenkins', 'CI/CD', 'IaC', 'Prometheus'].map((tag) => (
                 <span
                   key={tag}
                   className="px-3 py-1 rounded-full text-xs font-mono font-semibold border border-primary/30 bg-primary/10 text-primary hover:border-accent/50 hover:bg-accent/10 hover:text-accent transition-all duration-300 cursor-default"
@@ -118,7 +118,7 @@ export default function AboutSection() {
                   <circle cx="12" cy="8" r="4" />
                   <path d="M20 21a8 8 0 0 0-16 0" />
                 </svg>
-                <span>B.Tech CSE · Amal Jyothi College of Engineering · 2025</span>
+                <span>B.Tech CSE · Amal Jyothi College of Engineering · 2021 – 2025</span>
               </div>
             </div>
           </div>
@@ -131,28 +131,53 @@ export default function AboutSection() {
             </div>
 
             <div className="glass-card rounded-2xl p-6 border border-border/50 space-y-4">
-              <p className="text-sm font-semibold text-foreground">Currently Working On</p>
+              <div className="flex items-center justify-between">
+                <p className="text-sm font-semibold text-foreground flex items-center gap-2">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22D3EE" strokeWidth="2">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                    <polyline points="2 17 12 22 22 17" />
+                    <polyline points="2 12 12 17 22 12" />
+                  </svg>
+                  Core Specializations
+                </p>
+                <span className="text-xs font-mono text-accent bg-accent/10 border border-accent/30 px-2 py-0.5 rounded">
+                  4 Focus Areas
+                </span>
+              </div>
               <div className="space-y-3">
                 {[
-                  { task: 'AWS High Availability PHP App', progress: 90, color: '#22D3EE' },
-                  { task: 'Ansible WordPress Automation', progress: 85, color: '#2563EB' },
-                  { task: 'HarvestHub Platform', progress: 95, color: '#7C3AED' },
+                  {
+                    title: 'Infrastructure as Code (IaC)',
+                    tools: 'Ansible · Terraform · Playbooks',
+                    color: '#22D3EE',
+                  },
+                  {
+                    title: 'Linux System Administration',
+                    tools: 'RHEL · Amazon Linux 2023 · GRUB',
+                    color: '#2563EB',
+                  },
+                  {
+                    title: 'Cloud Web Hosting (AWS)',
+                    tools: 'EC2 · ALB · Route 53 · SES · Nginx',
+                    color: '#7C3AED',
+                  },
+                  {
+                    title: 'Containers & Observability',
+                    tools: 'Docker · Kubernetes · Prometheus · Grafana',
+                    color: '#34D399',
+                  },
                 ].map((item) => (
-                  <div key={item.task}>
-                    <div className="flex justify-between text-xs mb-1">
-                      <span className="text-muted-foreground">{item.task}</span>
-                      <span className="font-mono" style={{ color: item.color }}>{item.progress}%</span>
+                  <div
+                    key={item.title}
+                    className="p-3 rounded-xl border border-border/30 bg-secondary/30 hover:border-border/60 transition-all duration-300 group"
+                  >
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="text-xs font-bold text-foreground group-hover:text-accent transition-colors">
+                        {item.title}
+                      </span>
+                      <span className="w-2 h-2 rounded-full" style={{ background: item.color }} />
                     </div>
-                    <div className="h-1.5 bg-secondary rounded-full overflow-hidden">
-                      <div
-                        className="h-full rounded-full transition-all duration-1000"
-                        style={{
-                          width: started ? `${item.progress}%` : '0%',
-                          background: item.color,
-                          transitionDelay: '0.5s',
-                        }}
-                      />
-                    </div>
+                    <p className="text-xs font-mono text-muted-foreground">{item.tools}</p>
                   </div>
                 ))}
               </div>

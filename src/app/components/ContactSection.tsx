@@ -181,10 +181,44 @@ export default function ContactSection() {
     setForm({ name: '', email: '', subject: '', message: '' });
   };
 
-  const copyEmail = () => {
-    navigator.clipboard.writeText('adithyansk2002@gmail.com');
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+  const copyEmail = async () => {
+    const email = 'adithyansk2002@gmail.com';
+    try {
+      if (navigator.clipboard && typeof window !== 'undefined' && window.isSecureContext) {
+        await navigator.clipboard.writeText(email);
+      } else {
+        const textarea = document.createElement('textarea');
+        textarea.value = email;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.focus();
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+      }
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    } catch (err) {
+      console.error('Failed to copy email: ', err);
+      const textarea = document.createElement('textarea');
+      textarea.value = email;
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.focus();
+      textarea.select();
+      try {
+        document.execCommand('copy');
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2500);
+      } catch (e) {
+        console.error('Fallback execCommand failed', e);
+      }
+      if (document.body.contains(textarea)) {
+        document.body.removeChild(textarea);
+      }
+    }
   };
 
   return (
@@ -196,7 +230,7 @@ export default function ContactSection() {
             Let&apos;s <span className="text-gradient-primary">Connect</span>
           </h2>
           <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
-            Open to Cloud Engineering, DevOps, and Infrastructure Engineering opportunities. Let&apos;s talk.
+            Open to Server Administration, Cloud Engineering, DevOps, and Infrastructure opportunities. Let&apos;s talk.
           </p>
         </div>
 
@@ -210,7 +244,7 @@ export default function ContactSection() {
                 <span className="text-sm font-semibold text-foreground">Available for Opportunities</span>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Currently seeking roles in Cloud Engineering and DevOps. Response time within 24 hours.
+                Seeking roles in Server Administration, Cloud Infrastructure, and DevOps. Response time within 24 hours.
               </p>
             </div>
 
@@ -246,15 +280,20 @@ export default function ContactSection() {
             {/* Action buttons */}
             <div className="flex flex-col gap-3">
               <button
+                type="button"
                 onClick={copyEmail}
-                className="w-full btn-outline px-4 py-3 rounded-xl text-sm font-semibold flex items-center justify-center gap-2"
+                className={`w-full px-4 py-3 rounded-xl text-sm font-semibold flex items-center justify-center gap-2 transition-all duration-300 ${
+                  copied
+                    ? 'bg-green-500/20 border border-green-500/50 text-green-400 shadow-[0_0_15px_rgba(52,211,153,0.3)]'
+                    : 'btn-outline'
+                }`}
               >
                 {copied ? (
                   <>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34D399" strokeWidth="2.5">
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
-                    Copied!
+                    <span>Copied to Clipboard!</span>
                   </>
                 ) : (
                   <>
@@ -262,7 +301,7 @@ export default function ContactSection() {
                       <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
                       <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
                     </svg>
-                    Copy Email Address
+                    <span>Copy Email Address</span>
                   </>
                 )}
               </button>

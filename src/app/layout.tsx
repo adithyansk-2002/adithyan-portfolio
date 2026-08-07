@@ -2,7 +2,6 @@ import React from 'react';
 import type { Metadata, Viewport } from 'next';
 import { DM_Sans } from 'next/font/google';
 import '../styles/tailwind.css';
-import { Analytics } from "@vercel/analytics/next"
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -18,8 +17,8 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
-  title: 'AdithyanDev — Cloud & DevOps Engineer',
-  description: 'Adithyan Suresh Kumar is a Cloud & DevOps Engineer specializing in AWS, Linux, Ansible, Docker and Terraform infrastructure automation.',
+  title: 'Adithyan Suresh Kumar — Server Administrator Trainee | Cloud & DevOps',
+  description: 'Adithyan Suresh Kumar is a Server Administrator Trainee specializing in AWS, Linux system administration, Infrastructure as Code (IaC), Docker, Kubernetes, Jenkins, Terraform, and Ansible.',
   icons: {
     icon: [{ url: '/favicon.ico', type: 'image/x-icon' }],
   },
@@ -31,9 +30,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className={dmSans.className}>
         {children}
 
-        <Analytics />
-
-      </body>
+        <script type="module" async src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fadithyande3422back.builtwithrocket.new&_be=https%3A%2F%2Fappanalytics.rocket.new&_v=0.1.19" />
+        <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.2" /></body>
     </html>
   );
 }

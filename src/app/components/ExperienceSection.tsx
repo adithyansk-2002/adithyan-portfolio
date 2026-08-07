@@ -4,89 +4,68 @@ import React, { useState } from 'react';
 
 const experiences = [
   {
-    id: 'ipsr',
-    role: 'Cloud & DevOps Intern',
-    company: 'IPSR Solutions Ltd',
+    id: 'ipsr-admin',
+    role: 'Server Administrator Trainee',
+    company: 'IPSR Solutions Limited',
     location: 'Kottayam, Kerala',
-    period: 'February 2026 – Present',
+    period: '06/2026 – Present',
     status: 'current',
     color: '#22D3EE',
-    description: 'Building automated, secure and scalable cloud infrastructure on AWS. Hands-on with Linux administration, containerization, and deployment workflows.',
+    description: 'Designing, automating, and managing cloud infrastructure using AWS, Linux, Ansible, Nginx, PHP 8, MariaDB, and Let\'s Encrypt SSL across production environments.',
     highlights: [
-      'Automated production-ready WordPress deployments on AWS using Ansible with reusable playbooks for Nginx, PHP, MariaDB, and SSL',
-      'Designed and deployed highly available PHP web applications using Amazon EC2, Application Load Balancers, Apache, and MariaDB',
-      'Configured Amazon SES with PHPMailer for secure SMTP-based email delivery in PHP applications',
-      'Installed, configured, and administered Apache, Nginx, PHP, MariaDB, and Docker on Amazon Linux 2023',
-      'Strengthened Linux server security by implementing CSF and APF firewalls with rule validation',
-      'Built reusable multi-node AWS infrastructure using Ansible IaC principles and version-controlled automation',
-      'Diagnosed and recovered Linux systems from GRUB boot failures through manual bootloader recovery',
-      'Configured and managed 5+ AWS services: EC2, IAM, VPC, S3, and Route 53',
-      'Administered RHEL systems across 20+ sysadmin tasks: users, permissions, storage, networking, services',
-      'Utilized Docker, Jenkins, Terraform, and Ansible across multiple deployment and automation workflows',
+      'Deployed, configured, and maintained production-ready web applications on AWS using EC2, Application Load Balancer, Route 53, and Amazon SES.',
+      'Provisioned and configured Nginx, PHP 8, MariaDB, WordPress, phpMyAdmin, SSL, and SFTP on Amazon Linux 2023 using Ansible.',
+      'Administered Linux servers by managing users, permissions, storage, and network performance, improving system efficiency by 20%, while performing GRUB recovery and troubleshooting boot, filesystem, and server issues.',
+      'Secured web hosting environments by implementing Let\'s Encrypt SSL, custom domains, firewall rules, and PHPMailer with Amazon SES, reducing vulnerabilities by 15%.',
     ],
-    tech: ['AWS', 'Ansible', 'Docker', 'Linux', 'Nginx', 'Apache', 'MariaDB', 'Terraform', 'Jenkins'],
+    tech: ['AWS', 'EC2', 'ALB', 'Route 53', 'SES', 'Nginx', 'PHP 8', 'MariaDB', 'WordPress', 'Ansible', 'Linux', 'Let\'s Encrypt', 'Firewalld', 'SELinux'],
   },
   {
-    id: 'makerhub',
-    role: 'Hackathon Team Lead',
-    company: 'MakerHub IEDC, AJCE',
+    id: 'ipsr-intern',
+    role: 'Cloud and DevOps Intern',
+    company: 'IPSR Solutions Limited',
     location: 'Kottayam, Kerala',
-    period: 'September 2024 – October 2024',
+    period: '02/2026 – 06/2026',
     status: 'completed',
-    color: '#7C3AED',
-    description: 'Led a team of 5 in a 24-hour hackathon to develop a technology solution for a real-world challenge.',
+    color: '#2563EB',
+    description: 'Managed AWS services, performed Linux (RHEL) system administration, and automated CI/CD deployment pipelines.',
     highlights: [
-      'Led team of 5 members in a 24-hour hackathon solving a real-world technology challenge',
-      'Designed and validated a working prototype within 24 hours under tight constraints',
-      'Applied critical thinking, rapid prototyping, and agile collaboration under time pressure',
-      'Presented and refined solutions based on mentor feedback',
+      'Managed AWS services including EC2, IAM, VPC, S3, and Route 53 for cloud deployments.',
+      'Performed Linux (RHEL) administration, including package management, service configuration, user administration, networking, and storage management.',
+      'Developed CI/CD pipelines using Jenkins and Ansible, reducing release cycles by 70% and enabling faster feature delivery to customers.',
     ],
-    tech: ['Leadership', 'Rapid Prototyping', 'Agile', 'Problem Solving'],
+    tech: ['AWS', 'EC2', 'IAM', 'VPC', 'S3', 'Route 53', 'RHEL', 'Jenkins', 'Ansible', 'CI/CD'],
   },
   {
     id: 'verzeo',
     role: 'Python Intern',
     company: 'Verzeo',
     location: 'Kottayam, Kerala',
-    period: 'January 2022 – February 2022',
+    period: '01/2022 – 02/2022',
     status: 'completed',
-    color: '#2563EB',
-    description: 'Built and evaluated machine learning models using Python, Scikit-learn, and Pandas.',
+    color: '#7C3AED',
+    description: 'Engineered and evaluated machine learning models using Python, Scikit-learn, and Pandas.',
     highlights: [
-      'Built and evaluated 3+ machine learning models using Python, Scikit-learn, and Pandas',
-      'Implemented and compared Linear Regression, Decision Trees, and K-Means Clustering algorithms',
-      'Gained practical exposure to real-world data preprocessing and model tuning',
+      'Engineered and evaluated 3+ machine learning models using Python, Scikit-learn, and Pandas.',
+      'Implemented and compared 3 machine learning algorithms including Linear Regression, Decision Trees, and K-Means Clustering.',
+      'Gained practical exposure to real-world data preprocessing and model tuning.',
     ],
-    tech: ['Python', 'Scikit-learn', 'Pandas', 'Machine Learning', 'NumPy'],
+    tech: ['Python', 'Scikit-learn', 'Pandas', 'Machine Learning', 'Linear Regression', 'K-Means'],
   },
 ];
 
 const education = [
   {
-    degree: 'B.Tech in Computer Science & Engineering',
-    institution: 'Amal Jyothi College of Engineering (Autonomous)',
+    degree: 'B.Tech in Computer Science',
+    institution: 'Amal Jyothi College of Engineering',
     location: 'Kottayam, Kerala',
     period: '2021 – 2025',
     color: '#22D3EE',
   },
-  {
-    degree: 'Higher Secondary (High School Diploma)',
-    institution: "St. Antony\'s Public School",
-    location: 'Kottayam, Kerala',
-    period: '2020 – 2021',
-    color: '#2563EB',
-  },
-  {
-    degree: 'Secondary (High School Diploma)',
-    institution: "St. Paul\'s School",
-    location: 'New Delhi, India',
-    period: '2007 – 2019',
-    color: '#7C3AED',
-  },
 ];
 
 export default function ExperienceSection() {
-  const [expanded, setExpanded] = useState<string | null>('ipsr');
+  const [expanded, setExpanded] = useState<string | null>('ipsr-admin');
 
   return (
     <section id="experience" className="section-reveal relative py-24 px-6">
@@ -208,16 +187,16 @@ export default function ExperienceSection() {
                 </svg>
                 Key Achievements
               </h3>
-              <ul className="space-y-2">
+              <ul className="space-y-3">
                 {[
-                  'Automated WordPress deployment on AWS',
-                  'Built highly available PHP applications',
-                  'GRUB recovery & Linux troubleshooting',
-                  'CSF/APF firewall implementation',
-                  'Reusable Ansible IaC playbooks',
+                  'Published 3 open-source Cloud & DevOps projects demonstrating IaC & automation.',
+                  'Led 5-member team as Team Leader in MakerHub IEDC 24-Hour Hackathon.',
+                  'Reduced release cycles by 70% using Jenkins & Ansible CI/CD pipelines.',
+                  'Improved server system efficiency by 20% & decreased response time by 30%.',
+                  'Reduced vulnerabilities by 15% via Let\'s Encrypt SSL, firewalls & SES integration.',
                 ]?.map((a) => (
-                  <li key={a} className="flex items-start gap-2 text-xs text-muted-foreground">
-                    <span className="mt-1 text-accent">+</span>
+                  <li key={a} className="flex items-start gap-2 text-xs text-muted-foreground leading-relaxed">
+                    <span className="mt-0.5 text-accent font-bold">+</span>
                     {a}
                   </li>
                 ))}

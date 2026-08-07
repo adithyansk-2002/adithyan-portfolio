@@ -4,21 +4,10 @@ import React from 'react';
 
 const certifications = [
   {
-    title: 'Python for Data Science',
-    issuer: 'NPTEL',
+    title: 'AWS Training Certificate',
+    issuer: 'IPSR Solutions Ltd.',
     color: '#FF9900',
-    category: 'Programming',
-    icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Cloud Infrastructure Foundations',
-    issuer: 'Oracle Academy',
-    color: '#F80000',
-    category: 'Cloud',
+    category: 'Cloud & AWS',
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z" />
@@ -26,55 +15,10 @@ const certifications = [
     ),
   },
   {
-    title: 'Database Foundations',
+    title: 'Cloud Infrastructure Foundations',
     issuer: 'Oracle',
     color: '#F80000',
-    category: 'Database',
-    icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <ellipse cx="12" cy="5" rx="9" ry="3" /><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
-        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Java Foundations',
-    issuer: 'Oracle',
-    color: '#F80000',
-    category: 'Programming',
-    icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <rect x="2" y="3" width="20" height="14" rx="2" /><path d="m8 21 4-4 4 4M12 17v4" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Doing More with Google Sheets',
-    issuer: 'Google Cloud',
-    color: '#4285F4',
-    category: 'Cloud',
-    icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18M9 21V9" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Deploying SAP on Google Cloud',
-    issuer: 'Google Cloud',
-    color: '#4285F4',
-    category: 'Cloud',
-    icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <circle cx="12" cy="12" r="3" /><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
-      </svg>
-    ),
-  },
-  {
-    title: 'AWS Training Certificate',
-    issuer: 'Amazon Web Services',
-    color: '#FF9900',
-    category: 'Cloud',
+    category: 'Cloud Infrastructure',
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
@@ -82,13 +26,26 @@ const certifications = [
     ),
   },
   {
-    title: 'NASA Space Apps Challenge',
-    issuer: 'NASA / ISAC',
-    color: '#0B3D91',
-    category: 'Hackathon',
+    title: 'Google Cybersecurity Professional Certificate',
+    issuer: 'Google',
+    color: '#4285F4',
+    category: 'Cybersecurity',
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M12 2L8 8H2l5 4-2 7 7-4 7 4-2-7 5-4h-6L12 2z" />
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+      </svg>
+    ),
+  },
+  {
+    title: 'SAP Deployment on Google Cloud',
+    issuer: 'Google Cloud',
+    color: '#34A853',
+    category: 'Enterprise Cloud',
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <circle cx="12" cy="12" r="3" />
+        <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
       </svg>
     ),
   },
