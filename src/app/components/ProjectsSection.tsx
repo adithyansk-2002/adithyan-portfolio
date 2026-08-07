@@ -44,7 +44,7 @@ const projects: Project[] = [
       'Infrastructure as Code (Terraform) ensures rapid, repeatable cluster provisioning',
       'Rolling updates via CI/CD eliminate downtime during application deployments',
     ],
-    image: "https://img.rocket.new/generatedImages/rocket_gen_img_1684f325c-1772376035798.png",
+    image: "/images/projects/skylearn.png",
     imageAlt: 'Dark server room with glowing blue rack lights, cloud infrastructure, deep shadows, dramatic IT environment',
     featured: true
   },
@@ -69,7 +69,7 @@ const projects: Project[] = [
       'Automated regional parity drastically reduces recovery point/time objectives (RPO/RTO)',
       'Idempotent playbooks guarantee clean, predictable environment states',
     ],
-    image: "https://img.rocket.new/generatedImages/rocket_gen_img_1bd1d5a94-1772226968376.png",
+    image: "/images/projects/aws-automation.png",
     imageAlt: 'Abstract server network visualization with dark background, glowing purple and blue connection nodes',
     featured: true
   },
@@ -94,7 +94,7 @@ const projects: Project[] = [
       'Centralized server configuration prevents configuration drift across deployments',
       'Automated Let\'s Encrypt SSL ensures zero security oversight',
     ],
-    image: "https://img.rocket.new/generatedImages/rocket_gen_img_15b1ba3ed-1767879310858.png",
+    image: "/images/projects/wordpress-prod.png",
     imageAlt: 'Server security network visualization with dark background and glowing purple nodes',
     featured: false
   },
