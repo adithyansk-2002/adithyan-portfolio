@@ -158,29 +158,21 @@ export default function ProjectsSection() {
               tabIndex={0}
               onKeyDown={(e) => e.key === 'Enter' && handleToggle(project.id)}
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative aspect-[1060/441] w-full overflow-hidden">
                 <AppImage
                   src={project.image}
                   alt={project.imageAlt}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-card/90 via-card/40 to-transparent" />
-                <div className="absolute top-4 left-4">
-                  <span
-                    className="px-2 py-1 rounded text-xs font-mono font-semibold"
-                    style={{ color: project.color, background: `${project.color}20`, border: `1px solid ${project.color}40` }}
-                  >
-                    {project.type.split(' · ')[0]}
-                  </span>
-                </div>
-                <div className="absolute top-4 right-4">
+                <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-transparent to-transparent z-10 pointer-events-none" />
+                <div className="absolute top-3 right-3 z-20">
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={(e) => e.stopPropagation()}
-                    className="w-8 h-8 rounded-lg bg-background/60 backdrop-blur-sm flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors"
+                    className="w-8 h-8 rounded-lg bg-background/60 backdrop-blur-sm flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors border border-white/10"
                     aria-label={`GitHub repository for ${project.title}`}
                   >
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
