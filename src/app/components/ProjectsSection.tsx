@@ -33,7 +33,7 @@ const projects: Project[] = [
     description: 'Designed and deployed a production-grade cloud-native learning platform on AWS using Docker, Kubernetes, Traefik, Terraform, Ansible, and GitHub Actions.',
     longDescription: 'SkyLearn is a cloud-native platform deployed on AWS. Automated infrastructure provisioning, application deployment, and rolling updates through Terraform, Ansible, and GitHub Actions CI/CD integrated with GHCR. Includes a full observability stack with Prometheus, Grafana, Loki, and Promtail for metrics collection, centralized logging, and Kubernetes workload monitoring.',
     tech: ['AWS', 'Kubernetes', 'Docker', 'Traefik', 'Terraform', 'Ansible', 'GitHub Actions', 'GHCR', 'Prometheus', 'Grafana', 'Loki', 'Promtail'],
-    github: 'https://github.com/adithyansk-2002',
+    github: 'https://github.com/adithyansk-2002/SkyLearn-DevOps',
     challenges: [
       'Configuring Traefik ingress controller and SSL routing in Kubernetes',
       'Integrating Loki and Promtail for centralized log aggregation across nodes',
@@ -58,7 +58,7 @@ const projects: Project[] = [
     description: 'Designed and provisioned a multi-node AWS infrastructure using Ansible on Amazon Linux 2023, cutting deployment duration by over 90%.',
     longDescription: 'Engineered reusable Ansible playbooks to provision multi-node AWS infrastructure on Amazon Linux 2023, streamlining webpage deployment and increasing deployment frequency. Spearheaded full regional disaster recovery replication in a separate AWS region, achieving 100% environment parity.',
     tech: ['AWS', 'Ansible', 'Amazon Linux 2023', 'EC2', 'IaC', 'Disaster Recovery', 'Linux Admin', 'Bash'],
-    github: 'https://github.com/adithyansk-2002',
+    github: 'https://github.com/adithyansk-2002/AWS-Ansible-Automation',
     challenges: [
       'Ensuring 100% playbook idempotency across regional deployments',
       'Replicating multi-node network configurations in a separate AWS region',
@@ -83,7 +83,7 @@ const projects: Project[] = [
     description: 'Engineered and automated a production-ready WordPress environment on Amazon Linux 2023 using Ansible, decreasing response time by 30%.',
     longDescription: 'Automated full server provisioning and web hosting configurations including Nginx, PHP 8, MariaDB, phpMyAdmin, SFTP, Let\'s Encrypt SSL, and custom DuckDNS domain integration. Implemented secure hosting practices and server optimization to decrease average response time by 30%.',
     tech: ['WordPress', 'Ansible', 'Nginx', 'PHP 8', 'MariaDB', 'phpMyAdmin', 'SFTP', 'Let\'s Encrypt SSL', 'DuckDNS', 'Amazon Linux 2023'],
-    github: 'https://github.com/adithyansk-2002',
+    github: 'https://github.com/adithyansk-2002/WordPress-Ansible-Deployment',
     challenges: [
       'Automating SSL certificate issue and renewal via Let\'s Encrypt in Ansible',
       'Optimizing Nginx fastcgi cache and MariaDB buffer pools for speed',
@@ -108,7 +108,7 @@ const projects: Project[] = [
     description: 'Full-stack crop trading platform enabling direct farmer-to-retailer bidding with 98.6% LSTM price prediction accuracy and Ethereum smart contracts.',
     longDescription: 'HarvestHub connects farmers directly with retailers through a transparent bidding system built with React.js and Flask. Trained an LSTM neural network on 28 years (1994–2022) of crop price data to provide data-driven bidding recommendations with 98.6% accuracy, while using Ethereum smart contracts for tamper-resistant transaction logs.',
     tech: ['React.js', 'Flask', 'Python', 'LSTM', 'Scikit-learn', 'TensorFlow', 'Ethereum', 'Solidity', 'Smart Contracts'],
-    github: 'https://github.com/adithyansk-2002',
+    github: 'https://github.com/adithyansk-2002/HarvestHub',
     challenges: [
       'Preprocessing 28 years of agricultural time-series data for LSTM training',
       'Integrating Ethereum smart contracts with Flask backend services',
