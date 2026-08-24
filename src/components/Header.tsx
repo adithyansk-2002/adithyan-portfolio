@@ -10,7 +10,7 @@ const navLinks = [
   { label: 'Projects', href: '#projects' },
   { label: 'Architecture', href: '#architecture' },
   { label: 'Terminal', href: '#terminal' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Certifications', href: '#certifications' },
 ];
 
 export default function Header() {
@@ -92,7 +92,7 @@ export default function Header() {
               className="hidden lg:flex btn-primary px-4 py-2 rounded-lg text-sm font-semibold items-center gap-2"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-glow" />
-              Hire Me
+              Contact Me
             </a>
             <button
               onClick={() => setMobileOpen(true)}
@@ -136,7 +136,7 @@ export default function Header() {
               onClick={() => setMobileOpen(false)}
               className="mt-4 btn-primary px-8 py-3 rounded-xl text-base font-semibold"
             >
-              Hire Me
+              Contact Me
             </a>
           </nav>
         </div>
