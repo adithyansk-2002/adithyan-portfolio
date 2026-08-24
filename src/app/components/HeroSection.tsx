@@ -6,6 +6,7 @@ import AnimatedBackground from "./AnimatedBackground";
 
 const roles = [
   'Server Administrator Trainee',
+  'Red Hat Certified System Administrator',
   'Cloud & DevOps Engineer',
   'Linux Administrator',
   'Infrastructure Automation Engineer',
@@ -112,7 +113,7 @@ export default function HeroSection() {
           </div>
 
           <p className="text-muted-foreground text-base leading-relaxed max-w-lg">
-            Server Administrator Trainee with hands-on experience designing, automating, and managing cloud infrastructure using{' '}
+            Server Administrator Trainee and RHCSA certified professional with hands-on experience designing, automating, and managing cloud infrastructure using{' '}
             <span className="text-foreground font-medium">AWS, Linux, Docker, Kubernetes, Jenkins, Terraform, and Ansible</span>.
             Specialized in Infrastructure as Code (IaC), Linux system administration, production web hosting, and CI/CD automation across AWS environments.
           </p>
@@ -237,7 +238,7 @@ export default function HeroSection() {
                     <path d="m8 12 3 3 5-5" />
                   </svg>
                 </div>
-                <span className="text-xs font-mono text-purple-light">IaC & CI/CD</span>
+                <span className="text-xs font-mono text-purple-light"> RHCSA Certified </span>
               </div>
             </div>
           </div>
