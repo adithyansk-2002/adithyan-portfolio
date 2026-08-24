@@ -4,24 +4,13 @@ import React from 'react';
 
 const certifications = [
   {
-    title: 'AWS Training Certificate',
-    issuer: 'IPSR Solutions Ltd.',
-    color: '#FF9900',
-    category: 'Cloud & AWS',
+    title: 'Red Hat Certified System Administrator',
+    issuer: 'Red Hat',
+    color: '#EE0000',
+    category: 'Red Hat & Linux',
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Cloud Infrastructure Foundations',
-    issuer: 'Oracle',
-    color: '#F80000',
-    category: 'Cloud Infrastructure',
-    icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+        <rect x="2" y="3" width="20" height="14" rx="2" /><path d="m8 21 4-4 4 4M12 17v4" />
       </svg>
     ),
   },
@@ -46,6 +35,39 @@ const certifications = [
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <circle cx="12" cy="12" r="3" />
         <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
+      </svg>
+    ),
+  },
+  {
+    title: 'AWS Training Certificate',
+    issuer: 'IPSR Solutions Ltd.',
+    color: '#FF9900',
+    category: 'Cloud & AWS',
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Cloud Infrastructure Foundations',
+    issuer: 'Oracle',
+    color: '#F80000',
+    category: 'Cloud Infrastructure',
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Python for Data Science',
+    issuer: 'NPTEL',
+    color: '#2563EB',
+    category: 'Data Science & Programming',
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" />
       </svg>
     ),
   },
@@ -94,7 +116,7 @@ export default function CertificationsSection() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {certifications?.map((cert) => (
             <div
               key={cert?.title}
