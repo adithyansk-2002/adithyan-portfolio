@@ -29,9 +29,9 @@ export const metadata: Metadata = {
     siteName: 'AdithyanDev Portfolio',
     images: [
       {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
+        url: 'https://adithyan-dev.vercel.app/og-image.png',
+        width: 1917,
+        height: 925,
         alt: 'AdithyanDev — Cloud & DevOps Engineer Portfolio',
       },
     ],
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AdithyanDev — Cloud & DevOps Engineer',
     description: 'Adithyan Suresh Kumar (AdithyanDev) is a Cloud & DevOps Engineer specializing in AWS, Linux system administration, Infrastructure as Code (IaC), Docker, Kubernetes, Jenkins, Terraform, and Ansible.',
-    images: ['/og-image.png'],
+    images: ['https://adithyan-dev.vercel.app/og-image.png'],
   },
 };
 
